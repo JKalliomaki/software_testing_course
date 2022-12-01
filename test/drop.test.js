@@ -24,42 +24,30 @@ describe("Drop from beging of array", function(){
             expect(drop(inputArray, 0)).to.deep.equal(inputArray);
             done();
         })
+
+        it("Array including different types", function(done){
+            expect(drop(["String", 123, [], {a:null}], 2)).to.deep.equal([[], {a:null}]);
+            done();
+        })
     })
 
     describe("Invalid parameters", function(){
-        it("Null as 1st parameter", function(done){
+        it("Invalid type for 1st parameter", function(done){
             expect(drop(null)).to.throw();
-            done();
-        })
-        it("String as 1st parameter", function(done){
             expect(drop("String")).to.throw();
-            done();
-        })
-        it("Int as 1st parameter", function(done){
             expect(drop(123)).to.throw();
-            done();
-        })
-        it("Object as 1st parameter", function(done){
             expect(drop({a:null})).to.throw();
             done();
         })
 
-        it("Null as 2nd parameter", function(done){
+        it("Invalid type for 2nd parameter", function(done){
             expect(drop(inputArray, null)).to.throw();
-            done();
-        })
-        it("String as 2nd parameter", function(done){
             expect(drop(inputArray, "String")).to.throw();
-            done();
-        })
-        it("Array as 2nd parameter", function(done){
             expect(drop(inputArray, inputArray)).to.throw();
-            done();
-        })
-        it("Object as 2nd parameter", function(done){
             expect(drop(inputArray, {a:5})).to.throw();
             done();
         })
+
         it("Negative 2nd parameter", function(done){
             expect(drop(inputArray, -1)).to.throw();
             done();
