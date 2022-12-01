@@ -2,7 +2,7 @@
 import { expect } from "chai";
 import drop from "../src/drop.js";
 
-describe("Drop from beging of array", function(){
+describe("Drop from beginning of array", function(){
     var inputArray = [1, 2, 3];
 
     describe("Items get removed from beging", function(){
