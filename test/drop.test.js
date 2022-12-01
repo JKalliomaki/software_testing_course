@@ -44,23 +44,23 @@ describe("Drop from beging of array", function(){
             done();
         })
 
-        it("Null as 2st parameter", function(done){
+        it("Null as 2nd parameter", function(done){
             expect(drop(inputArray, null)).to.throw();
             done();
         })
-        it("String as 2st parameter", function(done){
+        it("String as 2nd parameter", function(done){
             expect(drop(inputArray, "String")).to.throw();
             done();
         })
-        it("Array as 2st parameter", function(done){
+        it("Array as 2nd parameter", function(done){
             expect(drop(inputArray, inputArray)).to.throw();
             done();
         })
-        it("Object as 2st parameter", function(done){
+        it("Object as 2nd parameter", function(done){
             expect(drop(inputArray, {a:5})).to.throw();
             done();
         })
-        it("Negative 2st parameter", function(done){
+        it("Negative 2nd parameter", function(done){
             expect(drop(inputArray, -1)).to.throw();
             done();
         })
