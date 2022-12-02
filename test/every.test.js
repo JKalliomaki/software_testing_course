@@ -95,4 +95,15 @@ describe("Every-function runs predicate for each element of array", () => {
             }
         })
     })
+
+    describe("Negative cases", () => {
+        it("Don't give function as predicate", () => {
+            let pred = "hello"
+            expect(() => every(["cat", "dog", "elephant"], pred)).to.throw(TypeError)
+        })
+
+        it("Give string as an input", () => {
+            expect(() => every("cat", Boolean)).to.throw(TypeError)
+        })
+    })
 })
