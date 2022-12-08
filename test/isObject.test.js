@@ -1,4 +1,4 @@
-// Unit tests for drop method
+// Unit tests for isObject method
 import { expect } from "chai";
 import isObject from "../src/isObject.js";
 
