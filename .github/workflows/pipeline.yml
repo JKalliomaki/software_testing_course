@@ -21,6 +21,7 @@ jobs:
 
       - name: Create coverage report
         if: always()
+        continue-on-error: true # This step shows failure when not all unit tests pass
         run: |
           npm run cov-report
 
