@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/JKalliomaki/software_testing_course/badge.svg?branch=main)](https://coveralls.io/github/JKalliomaki/software_testing_course?branch=main)
+
 # Student template
 
 ## Purpose of this repository
