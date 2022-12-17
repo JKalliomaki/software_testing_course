@@ -7,6 +7,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "c8 npm test",
+    "coverage-all-functions": "c8 --all=true npm test",
     "cov-report": "c8 --reporter=lcov npm test"
   },
   "author": "",
