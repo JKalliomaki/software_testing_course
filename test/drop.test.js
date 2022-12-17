@@ -32,21 +32,19 @@ describe("Drop from beginning of array", function(){
     })
 
     describe("Invalid parameters", function(){
-        it("Invalid type for 1st parameter", function(done){
-            expect(drop(null)).to.throw();
-            expect(drop("String")).to.throw();
-            expect(drop(123)).to.throw();
-            expect(drop({a:null})).to.throw();
-            done();
-        })
+        var secondParams = [null, "String", 123, {a:5}]
+        secondParams.forEach(elment => {
+            it(`${typeof elment} type for 1st parameter`, function(done){
+                expect(drop(element)).to.throw();
+                done()
+            })
 
-        it("Invalid type for 2nd parameter", function(done){
-            expect(drop(inputArray, null)).to.throw();
-            expect(drop(inputArray, "String")).to.throw();
-            expect(drop(inputArray, inputArray)).to.throw();
-            expect(drop(inputArray, {a:5})).to.throw();
-            done();
-        })
+            it(`${typeof elment} type for 2nd parameter`, function(done){
+                expect(drop(inputArray, element)).to.throw();
+                done()
+            })
+
+        });
 
         it("Negative 2nd parameter", function(done){
             expect(drop(inputArray, -1)).to.throw();
