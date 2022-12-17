@@ -32,14 +32,14 @@ describe("Drop from beginning of array", function(){
     })
 
     describe("Invalid parameters", function(){
-        var secondParams = [null, "String", 123, {a:5}]
-        secondParams.forEach(elment => {
-            it(`${typeof elment} type for 1st parameter`, function(done){
+        var secondParams = [null, "String", 123, {a:5}, NaN]
+        secondParams.forEach(element => {
+            it(`${typeof element} type for 1st parameter`, function(done){
                 expect(drop(element)).to.throw();
                 done()
             })
 
-            it(`${typeof elment} type for 2nd parameter`, function(done){
+            it(`${typeof element} type for 2nd parameter`, function(done){
                 expect(drop(inputArray, element)).to.throw();
                 done()
             })
